@@ -41,15 +41,14 @@ component D_FF is
     Port ( D : in STD_LOGIC;
            Res : in STD_LOGIC;
            Clk : in STD_LOGIC;
-           Q : out STD_LOGIC;
-           Qbar : out STD_LOGIC);
+           Q : out STD_LOGIC);
 end component;
 
-signal d, r, clk, q, qbar : STD_LOGIC;
+signal d, r, clk, q: STD_LOGIC;
 
 begin
 
-    UUT : D_FF port map(d, r, clk, q, qbar);
+    UUT : D_FF port map(d, r, clk, q);
      
      process begin
             
