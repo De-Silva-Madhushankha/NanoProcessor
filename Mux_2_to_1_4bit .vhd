@@ -36,7 +36,7 @@ entity Mux_2_to_1_4bit is
            LoadSel : in STD_LOGIC;
            Immediate : in STD_LOGIC_VECTOR (3 downto 0);
            MuxOut_4 : out STD_LOGIC_VECTOR (3 downto 0));
-end Mux_2_to_1_4bit;
+end MUX_2_to_1_4bit;
 
 architecture Behavioral of Mux_2_to_1_4bit is
 
