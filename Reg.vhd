@@ -44,10 +44,10 @@ architecture Behavioral of Reg is
 begin
 
     process (Clk,Reset,D) begin
-        if (rising_edge(Clk)) then
-            if Reset = '1' then
-                Q <= "0000";
-            elsif En = '1' then
+        if Reset = '1' then
+            Q <= "0000";
+        elsif (rising_edge(Clk)) then
+            if En = '1' then
                 Q <= D;
             end if;
         end if;
