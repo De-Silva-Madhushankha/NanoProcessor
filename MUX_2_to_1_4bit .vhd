@@ -31,14 +31,14 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity Mux_2_to_1_4bit is
+entity MUX_2_to_1_4bit is
     Port ( MuxIn : in STD_LOGIC_VECTOR (3 downto 0);
            LoadSel : in STD_LOGIC;
            Immediate : in STD_LOGIC_VECTOR (3 downto 0);
            MuxOut_4 : out STD_LOGIC_VECTOR (3 downto 0));
 end MUX_2_to_1_4bit;
 
-architecture Behavioral of Mux_2_to_1_4bit is
+architecture Behavioral of MUX_2_to_1_4bit is
 
 component TriStateBuffer
 	PORT( Input : in STD_LOGIC_VECTOR (3 downto 0);
