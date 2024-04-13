@@ -31,13 +31,13 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity Mux_2to_1_TB is
+entity Mux_2_to_1_TB is
 --  Port ( );
-end Mux_2to_1_TB;
+end Mux_2_to_1_TB;
 
 architecture Behavioral of Mux_2to_1_TB is
 
-component Mux_2to_1
+component MUX_2_to_1_4bit
     Port ( MuxIn : in STD_LOGIC_VECTOR (3 downto 0);
            LoadSel : in STD_LOGIC;
            Immediate : in STD_LOGIC_VECTOR (3 downto 0);
@@ -49,7 +49,7 @@ signal LoadSel: std_logic;
 
 begin
 
-UUT: Mux_2to_1
+UUT: MUX_2_to_1_4bit
 	PORT MAP(
     MuxIn => MuxIn,
     Immediate => Immediate,
