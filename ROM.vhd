@@ -41,14 +41,25 @@ architecture Behavioral of ROM is
 
 type rom_type is array (0 to 7) of std_logic_vector(11 downto 0); 
 signal program_ROM : rom_type := (
-        "100010001010", -- MOVI R1,10
-        "100100000001", -- MOVI R2,1
-        "010100000000", -- NEG R2
-        "000010100000", -- ADD R1,R2
-        "110010000111", -- JNZ R1,7
-        "110000000011", -- JNZ R0,4
-        "000000000000", -- 
-        "ZZZZZZZZZZZZ"  -- High Imp.
+    --example program
+        -- "100010001010", -- MOVI R1,10
+        -- "100100000001", -- MOVI R2,1
+        -- "010100000000", -- NEG R2
+        -- "000010100000", -- ADD R1,R2
+        -- "110010000111", -- JNZ R1,7
+        -- "110000000011", -- JNZ R0,4
+        -- "000000000000", -- 
+        -- "ZZZZZZZZZZZZ"  -- High Imp.
+
+    "101110000001",                      -- MOVI R7,1
+    "100010000010",                      -- MOVI R1,2
+    "100100000011",                      -- MOVI R2,3
+    "001110010000",                      -- ADD R7,R1
+    "001110100000",                      -- ADD R7,R2
+    "110000000111",                      -- JNZ R0,7
+    "000000000000",                      -- 
+    "ZZZZZZZZZZZZ",                      -- High Imp.
+
         );
 
 begin
