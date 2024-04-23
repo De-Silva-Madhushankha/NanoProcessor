@@ -47,7 +47,7 @@ begin
         if(rising_edge(Clk_in)) then
             count <= count + 1;
             
-            if(count = 5) then
+            if(count = 5) then --To test on Basys3 board count should be updated to a required value
                 clk_status <= not clk_status;
                 Clk_out <= clk_status;
                 count <= 1;
