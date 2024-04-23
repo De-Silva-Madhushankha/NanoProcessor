@@ -58,7 +58,7 @@ signal program_ROM : rom_type := (
     "001100100000",                      -- ADD R6,R2
     "001111100000",                      -- Add R7,R6
     "110000000111",                      -- JNZ R0,7
-    "110000000111",                      -- JNZ R0,7
+    "110000000111",                      -- JNZ R0,7 This step keep iterating until reset or interupted
 
         );
 
