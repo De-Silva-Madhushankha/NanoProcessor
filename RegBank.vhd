@@ -9,13 +9,6 @@
 -- Target Devices: 
 -- Tool Versions: 
 -- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
 ----------------------------------------------------------------------------------
 
 
@@ -130,10 +123,10 @@ begin
                Q => Q6 
     );
     
-    reg_0_en <= not(decoderOut(0));
+    --reg_0_en <= not(decoderOut(0)); map reg_0_en signal enable to reg 7 then always result is stored in R7
     Reg_7 : Reg
     Port map ( D => Value,
-               EN => reg_0_en, -- always result is stored in R7
+               EN => decoderOut(7), -- Final result is stored in R7
                Clk => Clk,
                Reset => Reset,
                Q => Q7 
