@@ -56,9 +56,9 @@ signal program_ROM : rom_type := (
     "100100000011",                      -- MOVI R2,3
     "001100010000",                      -- ADD R6,R1
     "001100100000",                      -- ADD R6,R2
-    "001111100000",                      -- Add R7,R6
+    "001111100000",                      -- ADD R7,R6
     "110000000111",                      -- JNZ R0,7
-    "110000000111",                      -- JNZ R0,7 This step keep iterating until reset or interupted
+    "110000000111"                       -- JNZ R0,7 This step keep iterating until reset or interupted
 
         );
 
