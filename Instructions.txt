@@ -1,37 +1,33 @@
 Instructions to follow after generating bitstream.
 
-After generating the bitstream.
-Connect the BASYS 3 to the computer using the USB cable. The following steps should be carried out only on a computer with BASYS 3 attached.
+After generating the bitstream. Connect the BASYS 3 to the computer using the USB cable. The following steps should be carried out only on a computer with BASYS 3 attached.
 
-Warning
+Warning!!!
 Never touch/hold the development board from the top, bottom, or middle.  
 Static charges can ruin the small electronic components. Always hold the board from the sides.
 
-Make sure BASYS 3 is connected to the computer using a USB cable. Also, make sure JP1 jumper on the board is set to JTAG.
+Make sure BASYS 3 is connected to the computer using a USB cable. Also, make sure the JP1 jumper on the board is set to JTAG.
 
 Set the POWER switch to ON.
 
-Then click on Open Hardware Manager at the bottom of Flow Navigator panel. Then expand the dropdown list and click on Open Target. Then from the popup click Auto Connect. Now Vivado try to connect to the BASYS 3 board. If successful, it will get listed under Hardware manager.
+Then click on Open Hardware Manager at the bottom of the Flow Navigator panel. Then expand the dropdown list and click on Open Target. Then from the popup click Auto Connect. Now Vivado is trying to connect to the BASYS 3 board. If successful, it will get listed under Hardware Manager.
 
-Click on Program Device (see the bottom of the Flow Navigator panel) and then select the name of the FPGA.Click on Program button 
-from the popup window.
+Click on Program Device (see the bottom of the Flow Navigator panel) and then select the name of the FPGA. Click on the Program button 
+from the popup window. If successful vivado will not notify of any errors and the program should start running.
+
+The reset button resets the program counter and registers to 0.
+After resetting program will start over and continue.
 
 
-Open Target
-Program Device
+Basys3 Board Configuration
 
+Processor Reset Button =  btnC (Center Push Button)
 
-Basys3 Board
+Output of the Register 7 value = LEDs (LD0 – LD3) 
 
-Reset Button
+Zero Flag = LD14
 
-LEDs
+Overflow = LD15 
 
-Output 
-
-Zero Flag
-
-Overflow
-
-Seven Segment Display
+Seven Segment Display = Right Most Seven Segment Display (U2 = '0', U4 = '1', V4 = '1', W4 = '1')
 
