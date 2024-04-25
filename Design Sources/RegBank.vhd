@@ -123,7 +123,7 @@ begin
                Q => Q6 
     );
     
-    --reg_0_en <= not(decoderOut(0)); map reg_0_en signal enable to reg 7 then always result is stored in R7
+    --reg_0_en <= not(decoderOut(0)); map reg_0_en signal to reg 7 EN then always ADD/SUB result is stored in R7
     Reg_7 : Reg
     Port map ( D => Value,
                EN => decoderOut(7), -- Final result is stored in R7
